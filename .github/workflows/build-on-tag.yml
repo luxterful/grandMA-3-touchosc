@@ -39,5 +39,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            tosc-quickeys.xml
-            tosc-generate.tosc
+            dist/tosc-quickeys.xml
+            dist/grandma3commandwing.tosc

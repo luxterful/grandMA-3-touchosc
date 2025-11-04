@@ -55,4 +55,4 @@ let xmlString = doc.end({
 
 console.log(xmlString);
 
-compress(xmlString, "./dist/tosc-generate.tosc");
+compress(xmlString, "./dist/grandma3commandwing.tosc");
