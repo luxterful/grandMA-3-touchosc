@@ -41,3 +41,5 @@ jobs:
           files: |
             dist/tosc-quickeys.xml
             dist/grandma3commandwing.tosc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
