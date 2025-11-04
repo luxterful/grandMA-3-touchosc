@@ -1,0 +1,36 @@
+name: Build and Release on Tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate Quickeys
+        run: npx ts-node ./src/generate-quickeys
+
+      - name: Generate TOSC
+        run: npx ts-node src/tosc-generate
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: grandma3tosc-${{ github.ref_name }}
+          path: dist/
+          retention-days: 90

@@ -1,0 +1,36 @@
+{
+  "name": "grandma3tosc",
+  "version": "1.0.0",
+  "description": "GrandMA3 to TouchOSC converter",
+  "main": "dist/tosc-data.js",
+  "types": "dist/tosc-data.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "grandma3",
+    "touchosc",
+    "lighting",
+    "dmx"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "minizlib": "^3.1.0",
+    "uuid": "^9.0.1",
+    "xmlbuilder2": "^3.1.1"
+  }
+}
